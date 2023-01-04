@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.nav {
+  height: 40px;
+}
+
+.board {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 600px;
+  width: 500px;
+}
+
+.row {
+  display: flex;
+  height: 70px;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter {
+  display: flex;
+  height: 64px;
+  width: 64px;
+  border-width: 5px;
+  border-color: rgb(88, 83, 83);
+  background-color: black;
+  color: white;
+  margin: 3px 3px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.correct {
+  background-color: green;
+}
+
+.close{
+  background-color: rgb(211, 165, 39);
+}
+
+.wrong{
+  background-color: grey;
+}
