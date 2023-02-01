@@ -1,0 +1,186 @@
+.nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.nav {
+  height: 50px;
+  
+}
+
+.board {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 600px;
+  width: 500px;
+}
+
+.row {
+  display: flex;
+  height: 70px;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter {
+  display: flex;
+  height: 64px;
+  width: 64px;
+  border-width: 5px;
+  border-color: rgb(88, 83, 83);
+  background-color: black;
+  color: white;
+  margin: 3px 3px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  animation: pop 0.5s ease-in;
+  transform: scale(1);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.correct {
+  background-color: green;
+}
+
+.close{
+  background-color: rgb(211, 165, 39);
+}
+
+.wrong{
+  background-color: grey;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 5px;
+}
+
+#text {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cross {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  left: 1%;
+}
+
+.cross:before, .cross:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.cross:before {
+  transform: rotate(45deg);
+}
+
+.cross:after {
+  transform: rotate(-45deg);
+}
+
+.cross:hover {
+  background-color: rgb(71, 68, 68);
+  color: #333;
+}
+
+@keyframes cross {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.rules{
+  position: absolute;
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(63, 60, 60);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 400px;
+  height: 400px;
+  text-shadow: 2px;
+  padding-left: 20px;
+}
+
+
+
+body {
+  background-image: radial-gradient(circle at 50% 50%, rgb(200, 248, 194), rgb(240, 94, 58)),
+    radial-gradient(circle at 100% 50%, #ddd, rgb(141, 241, 73)),
+    radial-gradient(circle at 50% 100%, #ddd, #fff),
+    radial-gradient(circle at 0% 50%, #fff, rgb(224, 55, 55));
+  background-size: 200% 200%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  }
+  to {
+    background-position: 100% 100%, 0 100%, 0 0, 100% 0;
+  }
+}
+
+.footer{
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+
