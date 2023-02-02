@@ -1,3 +1,5 @@
 # Wordle
 
-Classic wordle game made with React and JS work still in progress
+Classic wordle game made with React and JS.
+
+You can try the game at https://semiaowordle.netlify.app/
