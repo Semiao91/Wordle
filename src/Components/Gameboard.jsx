@@ -2,12 +2,6 @@ import React, { useState, useEffect } from "react";
 import { word } from "../dictionary";
 
 
-// THINGS TO IMPLEMENT
-// ..........
-// 2 - add CSS animations to letter inputs and word checks
-// 3 - add side bar with the letters that have been used 
-
-
 export default function Gameboard() {
     
     const [letter, setLetter] = useState([]);
@@ -31,7 +25,7 @@ export default function Gameboard() {
         document.addEventListener("keypress", handleNewLetter)
         document.addEventListener("keydown", deleteLetter)
 
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, []) 
 
     const handleNewLetter = (event) => {
 
@@ -45,7 +39,7 @@ export default function Gameboard() {
 
         }
         else if (event.key === "Enter" && row === 5 & !word.includes(capacity.join(''))) {
-            // REPLACE ALERTS WITH POPUPS         
+       
             setVisibility(true)
             setMessage("This word doesnt exist")
         }
@@ -58,13 +52,13 @@ export default function Gameboard() {
             
 
             if (newWord === capacity.join('')){
-                // REPLACE ALERTS WITH POPUPS
+                
                 setVisibility(true)
                 setMessage("You won! Congratulations!")
             }
 
             else if (gameOverCounter === 6) {
-                // REPLACE ALERTS WITH POPUPS
+             
                 setVisibility("true")
                 setMessage("You lost :( Game Over!")
             }
